@@ -1,0 +1,17 @@
+@(user_profile: model.User_Profile)
+
+<div class="user-class">
+	<font size="3" color="black">name       : @user_profile.getName()</font><br>
+	<font size="3" color="black">id         : @user_profile.getId_str()</font><br>
+	<font size="3" color="black">location   : @user_profile.getLocation()</font><br>
+	<font size="3" color="black">description: @user_profile.getDescription()</font><br>
+	<font size="3" color="black">url	    : @user_profile.getUrl()</font><br><br>
+</div>
+
+@for(some_tweet <- user_profile.getTexts()){
+    <div class="tweet-item">
+    <ul>
+	  <font size="2" color="black">twitter: @some_tweet</font>
+	</ul>
+	</div>
+}

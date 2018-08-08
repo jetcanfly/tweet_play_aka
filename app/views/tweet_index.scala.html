@@ -1,0 +1,16 @@
+@(message: java.util.ArrayList[model.User])
+
+<form method="GET" action=/keyword>
+	<input type="text" name="keyword"></input>
+	<input type="submit"></input>
+</form>
+
+@for(some_tweet <- message){
+    <div class="tweet-item">
+    <ul>
+	  <li><a href='@{routes.Twitter.user_timeline()}'>screen name: @some_tweet.getScreen_name()</a></li>
+	  <br>
+	  <font size="2" color="black">@some_tweet.getText()</font>
+	</ul>
+	</div>
+}

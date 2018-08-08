@@ -1,0 +1,10 @@
+target/
+.DS_Store
+logs/
+
+.classpath
+.settings/
+**/.DS_Store
+
+project/target/
+/bin/

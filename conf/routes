@@ -1,0 +1,15 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                         controllers.HomeController.index
+#GET     /twitter/auth/:keyword              controllers.Twitter.auth(keyword:String)
+#GET     /favicon.ico    controllers.Assets.at(path="/public/images", file="favicon.png")
+GET     /ws			   controllers.Twitter.ws
+GET     /user/:name                         controllers.HomeController.index_userProfile(name)
+GET     /userFile                     controllers.Twitter.user_timeline
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file              controllers.Assets.at(path="/public",file)
+
+->          /webjars                webjars.Routes
